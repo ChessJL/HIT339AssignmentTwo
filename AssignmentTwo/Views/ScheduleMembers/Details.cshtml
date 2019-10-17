@@ -1,0 +1,29 @@
+﻿@model AssignmentTwo.Models.ScheduleMembers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ScheduleMembers</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ScheduleId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ScheduleId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MemberEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MemberEmail)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Myenrolment">Back to List</a>
+</div>

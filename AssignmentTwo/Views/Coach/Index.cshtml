@@ -1,0 +1,16 @@
+﻿@model IEnumerable<AssignmentTwo.Models.Coach>
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Index";
+}
+@foreach (var item in Model)
+{
+   
+    <h2>Hello!! @UserManager.GetUserName(User)</h2>
+    <a class="btn" asp-action="MySchedule">My coming schedule</a>
+    <a class="btn" asp-action="Showbiography" asp-route-id="@item.Id">See my biography</a>
+
+}
